@@ -25,13 +25,16 @@ docker run --name spring-petclinic-reactjs -p 8080:8080 -it -v /$(pwd):/home spr
 ```
 
 
-## Install and run
+## Run
 
-Note: Spring Boot Server App must be running before starting the client!
+### バックエンド
+Docker を起動し、ビルドした jar を実行することで Spring アプリケーションを起動します。
 
-To start the server, launch a Terminal and run from the project's root folder (`spring-petclinic`):
 ```
-./mvnw spring-boot:run
+docker start spring-petclinic-reactjs
+```
+```
+docker exec -it spring-petclinic-reactjs /bin/bash -c 'cd /home;java -jar target/*.jar'
 ```
 
 When the server is running you can try to access the API for example to query all known pet types:
