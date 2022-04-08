@@ -9,6 +9,12 @@ Mainly I've added the new package `org.springframework.samples.petclinic.web.api
 that contains the REST Api that is used by the React frontend. In this package most of the classes are taken 
 from the [angularjs version](https://github.com/spring-projects/spring-petclinic/tree/angularjs) of the demo.
 
+## 前提条件
+以下の環境を準備して下さい。
+* Docker
+* node.js
+* npm
+
 
 ## Build
 プロジェクト直下にある Dockerfile を用いて Docker イメージをビルドします。
