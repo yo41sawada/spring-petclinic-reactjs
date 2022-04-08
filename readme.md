@@ -10,6 +10,21 @@ that contains the REST Api that is used by the React frontend. In this package m
 from the [angularjs version](https://github.com/spring-projects/spring-petclinic/tree/angularjs) of the demo.
 
 
+## Build
+プロジェクト直下にある Dockerfile を用いて Docker イメージをビルドします。
+```
+docker build -t spring-petclinic-reactjs .
+```
+
+ビルドした Docker イメージを起動し、内部で Maven を使って Spring アプリケーションをビルドします。
+```
+docker run --name spring-petclinic-reactjs -p 8080:8080 -it -v /$(pwd):/home spring-petclinic-reactjs /bin/bash
+```
+```
+/bin/bash -c 'cd /home;./mvnw package'
+```
+
+
 ## Install and run
 
 Note: Spring Boot Server App must be running before starting the client!
