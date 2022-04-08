@@ -52,9 +52,16 @@ curl http://localhost:8080/api/pettypes
 
 After starting the server you can install and run the client from the `client` folder:
 
-1. `npm install` (installs the node modules and the TypeScript definition files)
-2. `PORT=4444 npm start` 
-3. Open `http://localhost:4444`
+初回の場合、パッケージをインストールして下さい。
+
+```
+npm install
+```
+
+React アプリケーションを起動し、`http://localhost:3000` にアクセスします。
+```
+npm start spring-petclinic-reactjs
+```
 
 (Why not use the same server for backend and frontend? Because Webpack does a great job for serving JavaScript-based SPAs and I think it's not too uncommon to run this kind of apps using two dedicated server, one for backend, one for frontend)
 
