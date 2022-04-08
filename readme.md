@@ -58,7 +58,7 @@ After starting the server you can install and run the client from the `client` f
 npm install
 ```
 
-React アプリケーションを起動し、`http://localhost:3000` にアクセスします。
+React アプリケーションを起動し、[http://localhost:3000](http://localhost:3000) にアクセスします。
 ```
 npm start spring-petclinic-reactjs
 ```
