@@ -22,10 +22,12 @@ from the [angularjs version](https://github.com/spring-projects/spring-petclinic
 docker build -t spring-petclinic-reactjs .
 ```
 
-ビルドした Docker イメージを起動し、内部で Maven を使って Spring アプリケーションをビルドします。
+ビルドした Docker イメージを起動します。
 ```
 docker run --name spring-petclinic-reactjs -p 8080:8080 -it -v /$(pwd):/home spring-petclinic-reactjs /bin/bash
 ```
+
+起動した Docker イメージ内で Maven を使って Spring アプリケーションをビルドします。
 ```
 /bin/bash -c 'cd /home;./mvnw package'
 ```
@@ -34,11 +36,14 @@ docker run --name spring-petclinic-reactjs -p 8080:8080 -it -v /$(pwd):/home spr
 ## Run
 
 ### バックエンド
-Docker を起動し、ビルドした jar を実行することで Spring アプリケーションを起動します。
+Docker イメージを起動します。
 
 ```
 docker start spring-petclinic-reactjs
 ```
+
+起動した Docker イメージ内で、ビルドした jar を実行することで Spring アプリケーションを起動します。
+
 ```
 docker exec -it spring-petclinic-reactjs /bin/bash -c 'cd /home;java -jar target/*.jar'
 ```
